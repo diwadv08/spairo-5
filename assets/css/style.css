@@ -1229,6 +1229,14 @@ textarea:focus {
   background:var(--red-light);
   color:white;
 }
+@media (max-width:700px) {
+  .btns-cta{
+    padding:10px 75px;
+  }
+  .container{
+    padding:5px;
+  }
+}
 .btns-cta:hover{
   background:var(--bg);
   color:var(--black);
