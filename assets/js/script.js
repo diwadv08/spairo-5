@@ -226,6 +226,19 @@
       }
     ];
 
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      const qEngine = document.getElementById('qe-engine');
+      const fEngine = document.getElementById('f-engine');
+      let optionEngine="<option value=''>All</option>";
+      PRODUCTS.map((e)=>{
+        optionEngine+=`<option>${e.engine}</option>`;
+      })
+      console.log(optionEngine)
+      qEngine.innerHTML=optionEngine;
+      fEngine.innerHTML=optionEngine;
+    })
+
     
 
     // Proximity scorer (rough)
@@ -253,17 +266,17 @@
                       />
                     </li>
                     <li class='list-group-item'>
-                      <div class="card-header m-0 p-0">
+                      <div class="card-header m-0 p-0 bb">
                         <span class="bg-primary badge" aria-label="Model year">${p.year}</span>
                         <span class="price text-black" aria-label="Price">$${p.price.toLocaleString()}</span>
                       </div>
                     </li>
-                    <li class='list-group-item'>                    
-                      <b>Yard:</b> <span class="muted">${p.yard}</span><span> | <b>ZIP</b> ${p.zip}</span>
+                    <li class='list-group-item p-2'>  
+                      <span><b>Mileage: </b>${p.mileage}kmph</span>
                       <br>
+                      <b>Yard:</b> <span class="muted">${p.yard}</span><span> | <b>ZIP:</b> ${p.zip}</span>
                     </li>
 
-                    <b class='p-1'>Short Description:</b>
                     ${p.shortDescription}
                 </div>` 
               : `<p class="muted">No short description available</p>`}
@@ -440,16 +453,14 @@
       BLOGS.forEach(b => {
         const el = document.createElement('div');
         el.className = 'swiper-slide';
-        el.innerHTML = `
-          <article class="card post">
+        el.innerHTML = `<article class="card post">
             <div class="body blogPost">
-              <h3 class="post-title">${(num+=1)+". "+b.title}</h3>
+              <h3 class="post-title">${b.title}</h3>
               <img src="${b.cover}" alt="${b.title}" loading="lazy"/>
               <p class="muted">${b.excerpt}</p>
               <a class="btn btn-outline-primary" href="#" onclick="openPost(${b.id});return false;"><i class='fa fa-eye'></i>View Blog</a>
             </div>
-          </article>
-        `;
+          </article>`;
         grid.appendChild(el);
       });
 
@@ -488,7 +499,7 @@
       blogTitle.textContent = blog.title;
       blogCover.src = blog.cover;
       blogCover.alt = blog.title;
-      blogContent.innerHTML = "<b>Description:</b> " + blog.content;
+      blogContent.innerHTML = blog.content;
       blogModal.classList.add('show');
       blogModal.removeAttribute('aria-hidden');
     }
@@ -551,7 +562,7 @@
       const stepsData = [
         { title: "Browse & Enquire", description: "View F‑150 engine listings with price & details. Tap Enquire.", icon: "1" },
         { title: "We Confirm with Yard", description: "We confirm nearest yard, stock & quote based on your ZIP.", icon: "2" },
-        { title: "Direct Yard Payment", description: "You pay the yard via their gateway. No middle‑layer payments.", icon: "3" },
+        { title: "Payment Process", description: "You pay the amount to Spairo LLC", icon: "3" },
         { title: "Ship & Support", description: "Yard ships, we share tracking & delivery updates plus after‑sales support.", icon: "4" },
       ];
 

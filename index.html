@@ -138,13 +138,7 @@
             </div>
             <div>
               <label class="muted" for="qe-engine">Engine</label>
-              <select id="qe-engine" required>
-                <option value="" disabled selected>Select Engine</option>
-                <option>2.7L EcoBoost</option>
-                <option>3.5L EcoBoost</option>
-                <option>5.0L V8</option>
-                <option>3.3L V6</option>
-              </select>
+              <select id="qe-engine" required></select>
             </div>
             <div>
               <label class="muted" for="qe-zip">Customer ZIP</label>
@@ -246,17 +240,12 @@
             <div class="filter">
               <label for="f-engine">Engine</label>
               <select id="f-engine" onchange="applyFilters()">
-                <option value="">All</option>
-                <option>2.7L EcoBoost</option>
-                <option>3.5L EcoBoost</option>
-                <option>5.0L V8</option>
-                <option>3.3L V6</option>
               </select>
             </div>
 
             <div class="filter">
               <label for="f-mileage"
-                >Max Mileage: <span id="mileage-val">120k</span></label
+                >Max Mileage: <span id="mileage-val">200k</span></label
               >
               <input
                 id="f-mileage"
@@ -271,7 +260,7 @@
 
             <div class="filter">
               <label for="f-price"
-                >Max Price: $<span id="price-val">4500</span></label
+                >Max Price: $<span id="price-val">8000</span></label
               >
               <input
                 id="f-price"
@@ -344,9 +333,6 @@
       <div class="swiper blogSwiper">
         <div class="swiper-wrapper" id="blog-grid"><!-- generated slides go here --></div>
       </div>
-              <!-- controls -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
     </div>
   </section>
 
