@@ -27,7 +27,7 @@
   --primary: #0076d6;
   --primary-hover: #04579b;
 
-  --brand: #dc2626;
+  --brand: #dc3545;
   --brand-dark: #b91c1c;
   --accent: #f97316;
 
@@ -38,6 +38,7 @@
 
   --secondary: #6c757d;
   --success: #198754;
+  --success2: #237b79;
   --danger: #dc3545;
   --warning: #ffc107;
   --info: #0dcaf0;
@@ -614,12 +615,12 @@ b,strong{
   align-items: center;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  background:var(--gradient-accent);
+  background: var(--danger) !important;
   color: var(--white);
   font-size: 0.75rem;
   font-weight: 800;
-  box-shadow: 0 4px 14px #dc262640;
 }
+
 
 /* Cards */
 .card {
@@ -1223,10 +1224,10 @@ textarea:focus {
   padding:14px 95px;
   text-align:center;
   text-decoration:none;
-  box-shadow:0px 0px 5px #353535;
+  box-shadow:0px 0px 5px #6f6f6f;
   position:relative;
   transition:.5s;
-  background:var(--red-light);
+  background:var(--success2);
   color:white;
 }
 @media (max-width:700px) {
@@ -1366,7 +1367,7 @@ textarea:focus {
   margin-top: 1.5rem;
 }  
 @media (max-width:700px) {
-  .modal-body{
+  .modal-body .myModal{
     grid-template-columns:1fr;
   }
   .specs {
@@ -1453,7 +1454,7 @@ textarea:focus {
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 .accordion-item.open .accordion-header{
-  background:var(--bg-red-gradient);
+  background:var(--danger);
   color:var(--white);
   border-color: var(--brand);
   box-shadow: var(--shadow-lg);
@@ -1779,7 +1780,7 @@ textarea:focus {
 }
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.6fr;
   gap: 54px;
 }
 
@@ -1802,11 +1803,7 @@ textarea:focus {
 .form-grid .full {
   grid-column: 1 / -1;
 }
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
+
 
 .full-width {
   grid-column: 1 / -1;
@@ -1834,6 +1831,7 @@ textarea:focus {
 .info-card {
   padding: 16px;
   height:max-content;
+  border-radius:20px;
 }
 input:focus,textarea:focus,select:focus{
   border:1.1px solid var(--accent)!important;
