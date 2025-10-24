@@ -634,7 +634,7 @@ window.addEventListener("scroll", () => {
       header.classList.remove("hide");
       return;
     }
-    if (currentScroll >= 2000) {
+    if (currentScroll >= 1100) {
       // Always show after certain scroll
       header.classList.remove("hide");
     } else {
