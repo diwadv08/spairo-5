@@ -1240,7 +1240,7 @@ textarea:focus {
 .btns-cta:hover{
   background:var(--bg);
   color:var(--black);
-  transform:translateY(-35px);
+  transform:translateY(-4.5px);
 }
 /* =========================================================
    Modals
