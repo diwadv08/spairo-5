@@ -518,7 +518,6 @@
 
 /* Hover Effect */
 .list-group-item:hover {
-  background: #f8f9fa;
   text-decoration: none;
 }
 
@@ -807,7 +806,7 @@ nav a[aria-current="page"]::after{
 }
 
 /* Responsive - Mobile */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .hamburger {
     display: flex;
   }
@@ -924,7 +923,7 @@ nav a[aria-current="page"]::after{
   position:relative;
   overflow:hidden;
   background:linear-gradient(to right,#ffffffaf,#d4d4d470),url(../images/bg2.jpg) fixed center no-repeat;
-  background-size:100%;
+  background-size:cover;
 }
 
 .card-box {
@@ -1008,7 +1007,7 @@ nav a[aria-current="page"]::after{
 /* Grid for form */
 .grid-2x2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 14px;
 }
 .full-width {
@@ -1236,6 +1235,11 @@ textarea:focus {
   }
   .container{
     padding:5px;
+  }
+  .grid-2x2 {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 14px;
   }
 }
 .btns-cta:hover{
@@ -1951,4 +1955,7 @@ input:focus,textarea:focus,select:focus{
 .short-desc li{
   font-size:14px;
   /* border:1px solid #e3e3e3; */
+}
+.modal,.modal-body-form{
+  overflow-y:auto;
 }
